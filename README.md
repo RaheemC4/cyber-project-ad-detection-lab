@@ -87,3 +87,7 @@ Logon Type: 3 (Network)
 | Windows 11 (Evaluation) | Domain-joined client |
 | Splunk Enterprise (Free tier) | SIEM / log ingestion and search |
 | PowerShell | Attack simulation (credential validation spray) |
+
+## Full Portfolio
+
+See the complete project index: [cybersecurity-portfolio](https://github.com/RaheemC4/cybersecurity-portfolio)
