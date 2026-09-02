@@ -69,7 +69,3 @@ This confirmed each of the five targeted accounts failed exactly once, in contra
 | Windows 11 (Evaluation) | Domain-joined client |
 | Splunk Enterprise (Free tier) | SIEM / log ingestion and search |
 | PowerShell | Attack simulation (credential validation spray) |
-
-## Interview Summary
-
-*"I built a detection lab in Active Directory, forwarded security logs to a SIEM, simulated a password spray attack, and wrote the detection logic to catch it — including troubleshooting why my first attack attempt wasn't generating the events I expected."*
