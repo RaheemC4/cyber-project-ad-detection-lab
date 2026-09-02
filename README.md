@@ -52,6 +52,24 @@ This confirmed each of the five targeted accounts failed exactly once, in contra
 
 ![Grouped account failure counts](screenshots/detection-timeline.png)
 
+## Confirming the Attack Chain (Client → DC)
+
+To make the attack scenario more realistic, I re-ran the spray from `Client01` (a domain-joined Windows workstation) instead of running it directly on the DC console — reflecting how a real attacker would more likely pivot from a compromised endpoint rather than have direct access to the Domain Controller itself.
+
+Inspecting the raw Windows Security event confirmed the source:
+
+```
+Network Information:
+    Workstation Name:      DESKTOP-LVHT0I1
+    Source Network Address: 10.0.2.20
+    Source Port:            64084
+Logon Type: 3 (Network)
+```
+
+`10.0.2.20` is Client01's static IP, and the workstation name matches its local hostname — confirming the failed logon attempts genuinely originated from a separate domain-joined machine, not the DC itself.
+
+![Raw event showing source workstation and IP](screenshots/raw-event-client-source.png)
+
 ## What This Demonstrates
 
 - Practical understanding of **Active Directory** structure and administration
